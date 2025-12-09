@@ -19,7 +19,7 @@ services:
       - no-new-privileges:true
     volumes:
       - type: bind
-        source: /path/to/models
+        source: ${MODEL_PATH}
         target: /models
     networks:
       whisper: {}
@@ -57,7 +57,7 @@ services:
       context: ./model-download
     volumes:
       - type: bind
-        source: /path/to/models
+        source: ${MODEL_PATH}
         target: /models
     restart: no
     networks:
